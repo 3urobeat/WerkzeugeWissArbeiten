@@ -3,8 +3,7 @@
 \usepackage[utf8]{inputenc} 
 \usepackage[T1]{fontenc} 
 \usepackage{graphicx}
-
-\renewcommand{\contentsname}{Inhaltsverzeichnis} % Rewrite tableofcontents in German (fails when task1.toc is not generated first!!)
+\usepackage[german]{babel}
 
 \begin{document}
 	\title{\bf Werkzeuge für das wissenschaftliche Arbeiten}
@@ -22,29 +21,29 @@
 		\hspace*{3cm}\scriptsize\bf Abbildung 1: \normalfont Darstellung der Klassenbeziehungen.\normalsize
 
 		\subsection{Einleitung}
-			Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein Objekt der Klasse "DataSetItem" repräsentiert.
+			Ein Datensatz besteht aus mehreren Daten, ein einzelnes Datum wird durch ein Objekt der Klasse \glqq{DataSetItem}\grqq{} repräsentiert.
 			Jedes Datum hat einen Namen (Zeichenkette), eine ID (Zahl) und bel. Inhalt.\\
 			\\
-			Nun sollen mehrere Daten, Objekte vom Typ "DataSetItem", in einem Datensatz zusammengefasst werden.
+			Nun sollen mehrere Daten, Objekte vom Typ \glqq{DataSetItem}\grqq{}, in einem Datensatz zusammengefasst werden.
 			Sie haben sich schon auf eine Schnittstelle und die benötigen Operationen, die ein Datensatz unterstützen muss, geeinigt.
-			Es gibt eine Klasse "DataSetInterface", die die Schnittstelle definiert und Operationen jedes Datensatzes angibt.
+			Es gibt eine Klasse \glqq{DataSetInterface}\grqq{}, die die Schnittstelle definiert und Operationen jedes Datensatzes angibt.
 			Bisher fehlt aber noch die Implementierung eines Datensatzes mit allen Operationen.\\
 			\\
-			Implementieren Sie eine Klasse "DataSet" als eine Unterklasse von "DataSetInterface".\\
+			Implementieren Sie eine Klasse \glqq{DataSet}\grqq{} als eine Unterklasse von \glqq{DataSetInterface}\grqq{}.\\
 	
 		\subsection{Aufbau}
-			Es gibt drei Dateien, "dataset.py", "main.py" und "implementation.py"\footnote{Dateien befinden sich im Ordner "/code/" dieses Git-Repositories.}.
-			In der "dataset.py" befinden sich die Klassen "DataSetInterface" und "DataSetItem",
-			in der Datei "implementation.py" muss die Klasse "DataSet" implementiert werden.
-			Die Datei "main.py" nutzt die Klassen "DataSet" und "DataSetItem" aus den jeweiligen Dateien und testet die Schnittstelle und Operationen von "DataSetInterface".\\
+			Es gibt drei Dateien, \glqq{dataset.py}\grqq{}, \glqq{main.py}\grqq{} und \glqq{implementation.py}\grqq{}\footnote{Dateien befinden sich im Ordner \glqq{/code/}\grqq{} dieses Git-Repositories.}.
+			In der \glqq{dataset.py}\grqq{} befinden sich die Klassen \glqq{DataSetInterface}\grqq{} und \glqq{DataSetItem}\grqq{},
+			in der Datei \glqq{implementation.py}\grqq{} muss die Klasse \glqq{DataSet}\grqq{} implementiert werden.
+			Die Datei \glqq{main.py}\grqq{} nutzt die Klassen \glqq{DataSet}\grqq{} und \glqq{DataSetItem}\grqq{} aus den jeweiligen Dateien und testet die Schnittstelle und Operationen von \glqq{DataSetInterface}\grqq{}.\\
 	
 		\subsection{Methoden}
-			Bei der Klasse "DataSet" sind insbesondere folgenden Methoden zu implementieren, die genaue Spezifikation finden Sie in der "dataset.py":\\
+			Bei der Klasse \glqq{DataSet}\grqq{} sind insbesondere folgenden Methoden zu implementieren, die genaue Spezifikation finden Sie in der \glqq{dataset.py}\grqq{}:\\
 			\begin{itemize}
 				\item \_\_setitem\_\_(self, name, id\_content)\\
 					Hinzufügen eines Datums, mit Name, ID und Inhalt
 				\item \_\_iadd\_\_(self, item)\\
-					Hinzufügen eines "DataSetItem"
+					Hinzufügen eines \glqq{DataSetItem}\grqq{}
 				\item \_\_delitem\_\_(self, name)\\
 					Löschen eines Datums auf Basis des Namens.\\
 					Das heißt auch, dass der Name eines Datums ein eindeutiger Schlüssel ist und jeder Name nur einmal pro Datensatz vorkommen kann.
@@ -65,10 +64,10 @@
 			\end{itemize}
 	
 	\section{Abgabe}
-		Programmieren Sie die Klasse "DataSet" in der Datei "implementation.py" zur Lösung der oben beschrieben Aufgabe im VPL.
+		Programmieren Sie die Klasse \glqq{DataSet}\grqq{} in der Datei \glqq{implementation.py}\grqq{} zur Lösung der oben beschrieben Aufgabe im VPL.
 		Sie können auch direkt auf Ihrem Computer programmieren, dazu finden Sie alle drei benötigten Dateien zum Download im Moodle.\\
 		\\
-		Das VPL nutzt den gleichen Code, wobei die "main.py" um weitere Testfälle und Überprüfungen erweitert wurde.
+		Das VPL nutzt den gleichen Code, wobei die \glqq{main.py}\grqq{} um weitere Testfälle und Überprüfungen erweitert wurde.
 		Die Überprüfungen dienen dazu sicherzustellen, dass Sie die richtigen Klassen nutzen.\\
 
 \end{document}
