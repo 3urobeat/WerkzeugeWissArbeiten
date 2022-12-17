@@ -1,0 +1,4 @@
+task/*
+!task/task1.tex
+!task/task1.pdf
+!task/task1.toc
